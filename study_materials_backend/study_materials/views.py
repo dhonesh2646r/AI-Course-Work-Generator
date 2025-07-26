@@ -51,7 +51,7 @@ def generate_flash_cards(request):
     if not question_type or not no_of_questions:
         return Response({'error': 'Question type and number of questions are required.'}, status=status.HTTP_400_BAD_REQUEST)
 
-    client = genai.Client(api_key="AIzaSyBeJbX4-WE_7X7JtEq-gbH8Zj8FvIHCWlI")
+    client = genai.Client(api_key="GEMINI_API_KEY")
     try:
         doc_data = None
         if file:
